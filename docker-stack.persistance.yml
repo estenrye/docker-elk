@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  elasticsearch:
+    volumes:
+      - type: bind
+        source: /opt/elastic_stack/storage
+        target: /usr/share/elasticsearch/data

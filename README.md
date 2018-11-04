@@ -293,6 +293,14 @@ existing Swarm cluster using the following command:
 $ docker stack deploy -c docker-stack.yml elk
 ```
 
+To deploy the stack with data persisted to the host, use the following command:
+
+```console
+$ docker stack deploy -c docker-stack.yml -c docker-stack.persistance.yml elk
+```
+
+The above command assumes that you have alredy created the `/opt/elastic_stack/storage` directory and applied the appropriate permissions.
+
 If all components get deployed without any error, the following command will show 3 running services:
 
 ```console
